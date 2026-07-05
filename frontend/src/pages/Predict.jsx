@@ -10,4 +10,4 @@ const Predict = () => {
     )
 }
 
-export default Feature;
+export default Predict;
