@@ -1,0 +1,13 @@
+import React from 'react'
+
+const Predict = () => {
+    return(
+        <>
+            <div className='predict'>
+                <h1>Predict Page</h1>
+            </div>
+        </>
+    )
+}
+
+export default Feature;
