@@ -10,11 +10,11 @@ const Navbar = () => {
                     <h1 className='bg-transparent'>Cardio Vascular Disease Prediction</h1>
                 </div>
                 <div className='links flex  border-2 border-black p-3 rounded-full w-2/5 items-center '> 
-                    <Link to='/' className='hover:border-white hover:line-through
+                    <Link to='/' className='hover:border-white 
                     hover:rounded-full px-16 py-1'>Home</Link>
-                    <Link to='/feature' className='hover:border-white hover:line-through
+                    <Link to='/feature' className='hover:border-white 
                     hover:rounded-full px-16 py-1'>Feature</Link>
-                    <Link to='/predict' className='hover:border-white hover:line-through
+                    <Link to='/predict' className='hover:border-white 
                     hover:rounded-full px-16 py-1'>Predict</Link>
                 </div>
             </div>

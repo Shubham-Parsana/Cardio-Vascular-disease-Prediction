@@ -2,10 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+body{
     background-color: rgb(232, 232, 249);
 }
 
 .navbar{
    background :linear-gradient(180deg, rgba(7, 173, 234, 0.4) 0%, rgba(209, 61, 37, 0) 100%);
+}
+
+.links{
+    display: flex;
+    align-items: center;
+}
+
+.links a {
+    font-weight: 600;
+    color: #334155; 
+    text-decoration: none;
+    padding: 0.5rem 4rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease-in-out;
+}
+
+.links a:hover {
+    color: white;
+    background-color: rgb(7, 173, 234);
+}
+
+.feature-text{
+    font-weight: 600;
+    color: #334155; 
+}
+
+.button{
+    background-color: rgb(7, 173, 234);
+    color: white;
+    font-weight: 600;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: 0.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover{
+    background-color: rgb(6, 150, 204);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature-image img{
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-image img:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
 }
