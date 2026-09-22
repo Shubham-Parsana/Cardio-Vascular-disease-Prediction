@@ -2,67 +2,34 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-    background-color: rgb(232, 232, 249);
+@layer base {
+  body {
+    /* Soft oat/linen background, deep charcoal text for an editorial, non-SaaS look */
+    @apply bg-[#F7F6F2] text-[#2C3338] antialiased selection:bg-teal-700/20 overflow-x-hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
 }
 
-.navbar{
-   background :linear-gradient(180deg, rgba(7, 173, 234, 0.4) 0%, rgba(209, 61, 37, 0) 100%);
-}
+@layer utilities {
+  .solid-card {
+    /* Crisp white cards with a very soft, organic shadow */
+    @apply bg-white rounded-2xl border border-[#E8E6E1] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] transition-all duration-300;
+  }
+  
+  .solid-card:hover {
+    @apply shadow-[0_8px_30px_-4px_rgba(0,0,0,0.08)];
+  }
 
-.links{
-    display: flex;
-    align-items: center;
-}
+  .solid-input {
+    @apply bg-[#FDFDFC] border border-[#E3E1DB] rounded-xl px-4 py-3 outline-none focus:border-teal-700 focus:ring-1 focus:ring-teal-700 transition-all text-[#2C3338] placeholder-slate-400;
+  }
 
-.links a {
-    font-weight: 600;
-    color: #334155; 
-    text-decoration: none;
-    padding: 0.5rem 4rem;
-    border-radius: 0.5rem;
-    transition: all 0.2s ease-in-out;
-}
-
-.links a:hover {
-    color: white;
-    background-color: rgb(7, 173, 234);
-}
-
-.feature-text{
-    font-weight: 600;
-    color: #334155; 
-}
-
-.button{
-    background-color: rgb(7, 173, 234);
-    color: white;
-    font-weight: 600;
-    width: 8rem;
-    height: 2.5rem;
-    border-radius: 0.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.button:hover{
-    background-color: rgb(6, 150, 204);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.feature-image img{
-    width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.feature-image img:hover{
-    transform: scale(1.05);
-    transition: transform 0.3s ease;
+  .btn-primary {
+    /* Deep rich teal/forest green instead of generic tech blue */
+    @apply bg-[#115E59] hover:bg-[#0F4C48] text-white font-medium py-3 px-6 rounded-xl flex justify-center items-center gap-2 transition-all shadow-sm hover:shadow-md disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+  
+  .btn-secondary {
+    @apply bg-white border border-[#E3E1DB] hover:bg-[#F7F6F2] text-[#2C3338] font-medium py-3 px-6 rounded-xl transition-all;
+  }
 }
