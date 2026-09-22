@@ -2,7 +2,7 @@ import pickle
 import pandas as pd
 from models import PatientData
 
-MODEL_PATH = r"d:\Cardio Vascular Disease Prediction\Training_Data\cardio_model_final_retrained.pkl"
+MODEL_PATH = r"d:\Cardio Vascular Disease Prediction\Backend\cardio_model_final_retrained.pkl"
 
 # Load the dictionary from the pickle file
 with open(MODEL_PATH, "rb") as f:
