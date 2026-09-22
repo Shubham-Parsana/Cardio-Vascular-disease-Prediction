@@ -1,8 +1,10 @@
+import os
 import pickle
 import pandas as pd
 from models import PatientData
 
-MODEL_PATH = r"d:\Cardio Vascular Disease Prediction\Backend\cardio_model_final_retrained.pkl"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODEL_PATH = os.path.join(BASE_DIR, "cardio_model_final_retrained.pkl")
 
 # Load the dictionary from the pickle file
 with open(MODEL_PATH, "rb") as f:
